@@ -1,0 +1,19 @@
+import requests
+
+# API URL
+url = "https://official-joke-api.appspot.com/random_joke"
+
+# Fetch data from API
+response = requests.get(url)
+
+# Convert response into JSON
+data = response.json()
+
+# Display formatted output
+print("\n😂 RANDOM JOKE 😂\n")
+
+print("Setup:")
+print(data["setup"])
+
+print("\nPunchline:")
+print(data["punchline"])
